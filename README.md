@@ -1,5 +1,4 @@
 # Python Begining.
-# This is my first Python program on GitHub
 # PERSINAL INFORMATION PROGRAM
 
 name = "Krutik Hirudkar"
