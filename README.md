@@ -1,28 +1,54 @@
 # Python Begining.
 # PERSINAL INFORMATION PROGRAM
 
-name = "Krutik Hirudkar"
-age = 20
-country = "India"
-hobby = "Exploring new things"
-favorite_subject = "Math"
-future_goal = "Become a good engineer"
-favorite_food = "Pizza"
-likes_coding = True
-favorite_color = "Blue"
-current_goal = "Improve my coding skills better than last year"
+import time
+import sys
 
-print("👋 Hello! Welcome to my Python Profile\n")
+# --- 1. My Personal Data ---
+# I used a dictionary here to keep things organized
+my_info = {
+    "Name": "Krutik Hirudkar",
+    "Age": 20,
+    "Location": "India 🇮🇳",
+    "Hobby": "Exploring new things 🔍",
+    "Subject": "Math 📐",
+    "Future Goal": "Become a good engineer 🚀",
+    "Favorite Food": "Pizza 🍕",
+    "Favorite Color": "Blue 🟦"
+}
 
-print(f"Name            : {name}")
-print(f"Age             : {age}")
-print(f"Country         : {country}")
-print(f"Hobby           : {hobby}")
-print(f"Favorite Subject: {favorite_subject}")
-print(f"Future Goal     : {future_goal}")
-print(f"Favorite Food   : {favorite_food}")
-print(f"Likes Coding    : {'Yes' if likes_coding else 'No'}")
-print(f"Favorite Color  : {favorite_color}")
-print(f"Current Goal    : {current_goal}")
+# --- 2. My Engineering Progress Logic ---
+# I added this function to show I can write my own logic
+def show_progress(goal_name, current_percent):
+    print(f"\n📊 Current Goal: {goal_name}")
+    bar_size = 20
+    filled = int(bar_size * current_percent / 100)
+    bar = "█" * filled + "-" * (bar_size - filled)
+    print(f"[{bar}] {current_percent}% Complete")
 
-print("\n🚀 Thanks for checking out my first Python project on GitHub!")
+# --- 3. The Main Display ---
+def main():
+    print("==========================================")
+    print(f"👋 WELCOME TO {my_info['Name'].upper()}'S PROFILE")
+    print("==========================================\n")
+    
+    # Printing info using a simple loop
+    for key, value in my_info.items():
+        print(f"➤ {key:<15}: {value}")
+        time.sleep(0.1)  # Adding a tiny delay to make it look like a real terminal loading
+
+    # Adding a special section for my coding status
+    likes_coding = True
+    status = "YES! 💻" if likes_coding else "Not yet"
+    print(f"➤ Likes Coding   : {status}")
+
+    # Showing my real-time progress
+    show_progress("Improving Python Skills", 65) 
+
+    print("\n" + "="*42)
+    print("🚀 Built by Krutik | Follow for more projects!")
+    print("="*42)
+
+if __name__ == "__main__":
+    main()
+
