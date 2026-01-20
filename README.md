@@ -111,7 +111,6 @@
     <div style="font-size: 11px; color: #888; margin-top: 5px;">
         ENGINEERING_GOAL: Becoming a good engineer [65%]
     </div>
-
     <div class="status-box" id="status"></div>
 </div>
 
