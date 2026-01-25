@@ -1,8 +1,8 @@
 # My Introductin
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krutik Hirudkar | Architect of Resilience</title>
@@ -82,8 +82,8 @@
             h1 { font-size: 2.5rem; }
         }
     </style>
-</head>
-<body>
+    </head>
+    <body>
 
     <main class="bento-grid">
         
@@ -133,5 +133,5 @@
         </a>
     </main>
 
-</body>
-</html>
+    </body>
+    </html>
