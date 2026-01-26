@@ -150,7 +150,7 @@
      music = "Synthwave"
     food = "Pizza"
 
-    print("Personal Information")
+    print("* Personal Information *")
     print("--------------------")
 
     print("Name:", name)
