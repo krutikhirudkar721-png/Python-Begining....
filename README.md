@@ -1,4 +1,4 @@
-# My Introductin usint html/css
+# My Introductin using html/css
 
     <!DOCTYPE html>
     <html lang="en">
