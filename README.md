@@ -1,5 +1,4 @@
 # My Introductin using html/css
-
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -92,38 +91,32 @@
             <h1>Krutik<br>Hirudkar</h1>
             <p class="tagline">Architecting AI-native resilience for the 2026 landscape. Currently bridging the gap between <span class="highlight">Abstract Math</span> and <span class="highlight">Agentic Workflows</span>.</p>
         </section>
-
         <!-- 2. The Core Number -->
         <section class="box age-badge">
             <span class="age-val">20</span>
             <span style="text-transform: uppercase; font-weight: 700; opacity: 0.8;">Circles of Growth</span>
         </section>
-
         <!-- 3. The 2026 Project Focus -->
         <section class="box vision">
             <h3>Vision 2026</h3>
             <p>Developing <strong>"Self-Healing MLOps"</strong>. I believe the next era isn't about more data, but more durable system logic built in Python.</p>
         </section>
-
         <!-- 4. The Engineering Mindset -->
         <section class="box hot-take">
             <h3>The Hot Take</h3>
             <p>"In 2026, prompt engineering is dead. <strong>Logical Architecture</strong> is the only skill that scales. If you can't sketch the math, you can't build the agent."</p>
         </section>
-
         <!-- 5. Flow State -->
         <section class="box flow-state">
             <h3>Flow State</h3>
             <p>Fueled by <strong>Synthwave</strong> and a minimalist desk setup. Currently obsessed with finding patterns in non-linear equations.</p>
         </section>
-
         <!-- 6. Real World Fuel -->
         <section class="box fuel">
             <h3>Carbon-Based Fuel</h3>
             <div style="font-size: 3.5rem;">🍕</div>
             <p style="font-weight: 800; letter-spacing: 2px;">PIZZA</p>
         </section>
-
         <!-- 7. Call to Action -->
         <a href="https://linkedin.com" class="box contact">
             <div style="text-align: center;">
@@ -136,17 +129,13 @@
     </html>
 
 # In Python 
-
     name = "Krutik Hirudkar"
     age = 20
     nationality = "Indian"
-
     role1 = "Engineer"
     role2 = "AI Systems Architect"
-
     vision = "Building self-healing AI systems using logic and math"
     philosophy = "Logical architecture is more important than prompt engineering"
-
      music = "Synthwave"
     food = "Pizza"
 
