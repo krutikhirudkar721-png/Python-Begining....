@@ -1,7 +1,9 @@
 import customtkinter as ctks
+
 # -----------------------------
 # Personal Information
 # -----------------------------
+
 name = "Krutik Hirudkar"
 age = 20
 nationality = "Indian"
