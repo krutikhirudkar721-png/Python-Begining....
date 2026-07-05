@@ -1,5 +1,4 @@
 import customtkinter as ctks
-
 # -----------------------------
 # Personal Information
 # -----------------------------
