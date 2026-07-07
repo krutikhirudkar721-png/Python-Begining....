@@ -1,10 +1,10 @@
-import customtkinter as ctks
+import tkinter as tk
+
 # -----------------------------
 # Personal Information
 # -----------------------------
 name = "Krutik Hirudkar"
 age = 20
-nationality = "Indian"
 role1 = "Engineer"
 role2 = "AI Systems Architect"
 vision = "Building self-healing AI systems using logic and math"
@@ -15,19 +15,12 @@ food = "Pizza"
 # -----------------------------
 # App Setup
 # -----------------------------
-
-ctk.set_appearance_mode("light")
-ctk.set_default_color_theme("blue")
-
-app = ctk.CTk()
+app = tk.Tk()
 app.title("Krutik Hirudkar | Architect of Resilience")
 app.geometry("1200x750")
-app.configure(fg_color="#F5F5F0")
+app.configure(bg="#F5F5F0")
 
-# -----------------------------
-# Grid Layout
-# -----------------------------
-
+# Grid Configuration
 for i in range(6):
     app.grid_columnconfigure(i, weight=1)
 
@@ -35,183 +28,146 @@ for i in range(4):
     app.grid_rowconfigure(i, weight=1)
 
 # -----------------------------
+# Helper Function
+# -----------------------------
+def card(parent, bg):
+    return tk.Frame(parent, bg=bg, bd=2, relief="ridge")
+
+# -----------------------------
 # Hero Card
 # -----------------------------
-hero = ctk.CTkFrame(
-    app,
-    corner_radius=30,
-    fg_color="#FFFFFF"
-)
+hero = card(app, "white")
 hero.grid(row=0, column=0, columnspan=4, rowspan=2,
-          padx=15, pady=15, sticky="nsew")
+          padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    hero,
-    text="Human / Engineer / India 🇮🇳",
-    font=("Arial", 14)
-).pack(anchor="w", padx=25, pady=(20, 5))
+tk.Label(hero,
+         text="Human / Engineer / India 🇮🇳",
+         bg="white",
+         font=("Arial", 14)).pack(anchor="w", padx=20, pady=10)
 
-ctk.CTkLabel(
-    hero,
-    text="Krutik\nHirudkar",
-    font=("Arial", 42, "bold"),
-    justify="left"
-).pack(anchor="w", padx=25)
+tk.Label(hero,
+         text=f"{name}",
+         bg="white",
+         font=("Arial", 36, "bold"),
+         justify="left").pack(anchor="w", padx=20)
 
-ctk.CTkLabel(
-    hero,
-    text="Architecting AI-native resilience for the future.\n"
-         "Currently bridging logic, mathematics and AI systems.",
-    font=("Arial", 16),
-    justify="left"
-).pack(anchor="w", padx=25, pady=20)
+tk.Label(hero,
+         text="Architecting AI-native resilience for the future.\n"
+              "Currently bridging logic, mathematics and AI systems.",
+         bg="white",
+         justify="left",
+         font=("Arial", 15)).pack(anchor="w", padx=20, pady=20)
 
 # -----------------------------
-# Age Badge
+# Age Card
 # -----------------------------
-age_card = ctk.CTkFrame(
-    app,
-    corner_radius=30,
-    fg_color="#A78BFA"
-)
+age_card = card(app, "#8B5CF6")
 age_card.grid(row=0, column=4, columnspan=2,
-              padx=15, pady=15, sticky="nsew")
+              padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    age_card,
-    text=str(age),
-    font=("Arial", 60, "bold"),
-    text_color="white"
-).pack(expand=True)
+tk.Label(age_card,
+         text=str(age),
+         bg="#8B5CF6",
+         fg="white",
+         font=("Arial", 52, "bold")).pack(expand=True)
 
-ctk.CTkLabel(
-    age_card,
-    text="Circles of Growth",
-    font=("Arial", 16, "bold"),
-    text_color="white"
-).pack(pady=(0, 20))
+tk.Label(age_card,
+         text="Years of Growth",
+         bg="#8B5CF6",
+         fg="white",
+         font=("Arial", 16, "bold")).pack(pady=15)
 
 # -----------------------------
 # Vision Card
 # -----------------------------
-vision_card = ctk.CTkFrame(
-    app,
-    corner_radius=25,
-    fg_color="#FFFFFF"
-)
+vision_card = card(app, "white")
 vision_card.grid(row=2, column=0, columnspan=3,
-                 padx=15, pady=15, sticky="nsew")
+                 padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    vision_card,
-    text="VISION 2026",
-    font=("Arial", 18, "bold")
-).pack(anchor="w", padx=20, pady=(20, 10))
+tk.Label(vision_card,
+         text="VISION 2026",
+         bg="white",
+         font=("Arial", 18, "bold")).pack(anchor="w", padx=20, pady=10)
 
-ctk.CTkLabel(
-    vision_card,
-    text=vision,
-    wraplength=400,
-    justify="left",
-    font=("Arial", 15)
-).pack(anchor="w", padx=20, pady=(0, 20))
+tk.Label(vision_card,
+         text=vision,
+         bg="white",
+         justify="left",
+         wraplength=500,
+         font=("Arial", 14)).pack(anchor="w", padx=20)
 
 # -----------------------------
 # Philosophy Card
 # -----------------------------
-philosophy_card = ctk.CTkFrame(
-    app,
-    corner_radius=25,
-    fg_color="#FFFFFF"
-)
+philosophy_card = card(app, "white")
 philosophy_card.grid(row=2, column=3, columnspan=3,
-                     padx=15, pady=15, sticky="nsew")
+                     padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    philosophy_card,
-    text="PHILOSOPHY",
-    font=("Arial", 18, "bold")
-).pack(anchor="w", padx=20, pady=(20, 10))
+tk.Label(philosophy_card,
+         text="PHILOSOPHY",
+         bg="white",
+         font=("Arial", 18, "bold")).pack(anchor="w", padx=20, pady=10)
 
-ctk.CTkLabel(
-    philosophy_card,
-    text=f'"{philosophy}"',
-    wraplength=400,
-    justify="left",
-    font=("Arial", 15)
-).pack(anchor="w", padx=20, pady=(0, 20))
+tk.Label(philosophy_card,
+         text=f'"{philosophy}"',
+         bg="white",
+         justify="left",
+         wraplength=500,
+         font=("Arial", 14)).pack(anchor="w", padx=20)
 
 # -----------------------------
-# Flow State Card
+# Music Card
 # -----------------------------
-flow_card = ctk.CTkFrame(
-    app,
-    corner_radius=25,
-    fg_color="#FFFFFF"
-)
-flow_card.grid(row=3, column=0, columnspan=2,
-               padx=15, pady=15, sticky="nsew")
+music_card = card(app, "white")
+music_card.grid(row=3, column=0, columnspan=2,
+                padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    flow_card,
-    text="FLOW STATE",
-    font=("Arial", 18, "bold")
-).pack(anchor="w", padx=20, pady=(20, 10))
+tk.Label(music_card,
+         text="FLOW STATE",
+         bg="white",
+         font=("Arial", 18, "bold")).pack(anchor="w", padx=20, pady=10)
 
-ctk.CTkLabel(
-    flow_card,
-    text=f"🎵 {music}",
-    font=("Arial", 20)
-).pack(anchor="w", padx=20, pady=(0, 20))
+tk.Label(music_card,
+         text="🎵 " + music,
+         bg="white",
+         font=("Arial", 20)).pack(anchor="w", padx=20)
 
 # -----------------------------
 # Food Card
 # -----------------------------
-food_card = ctk.CTkFrame(
-    app,
-    corner_radius=25,
-    fg_color="#FFF4E8"
-)
+food_card = card(app, "#FFF4E8")
 food_card.grid(row=3, column=2, columnspan=2,
-               padx=15, pady=15, sticky="nsew")
+               padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    food_card,
-    text="🍕",
-    font=("Arial", 60)
-).pack(pady=(15, 5))
+tk.Label(food_card,
+         text="🍕",
+         bg="#FFF4E8",
+         font=("Arial", 50)).pack(pady=10)
 
-ctk.CTkLabel(
-    food_card,
-    text=food.upper(),
-    font=("Arial", 22, "bold")
-).pack(pady=(0, 15))
+tk.Label(food_card,
+         text=food.upper(),
+         bg="#FFF4E8",
+         font=("Arial", 20, "bold")).pack()
 
 # -----------------------------
 # Roles Card
 # -----------------------------
-roles_card = ctk.CTkFrame(
-    app,
-    corner_radius=25,
-    fg_color="#FFFFFF"
-)
+roles_card = card(app, "white")
 roles_card.grid(row=3, column=4, columnspan=2,
-                padx=15, pady=15, sticky="nsew")
+                padx=10, pady=10, sticky="nsew")
 
-ctk.CTkLabel(
-    roles_card,
-    text="ROLES",
-    font=("Arial", 18, "bold")
-).pack(anchor="w", padx=20, pady=(20, 10))
+tk.Label(roles_card,
+         text="ROLES",
+         bg="white",
+         font=("Arial", 18, "bold")).pack(anchor="w", padx=20, pady=10)
 
-ctk.CTkLabel(
-    roles_card,
-    text=f"• {role1}\n• {role2}",
-    justify="left",
-    font=("Arial", 16)
-).pack(anchor="w", padx=20)
+tk.Label(roles_card,
+         text=f"• {role1}\n• {role2}",
+         bg="white",
+         justify="left",
+         font=("Arial", 15)).pack(anchor="w", padx=20)
 
 # -----------------------------
-# Run App
+# Run
 # -----------------------------
 app.mainloop()
