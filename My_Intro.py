@@ -23,6 +23,7 @@ app.geometry("1200x750")
 app.configure(bg="#F5F5F0")
 
 # Grid Configuration
+
 for i in range(6):
     app.grid_columnconfigure(i, weight=1)
 
