@@ -176,6 +176,7 @@ tk.Label(roles_card,
          bg="white",
          justify="left",
          font=("Arial", 15)).pack(anchor="w", padx=20)
+
 # -----------------------------
 # Run
 # -----------------------------
